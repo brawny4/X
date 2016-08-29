@@ -1,0 +1,13 @@
+## The prime factors of 13195 are 5, 7, 13 and 29.  What is the largest prime factor of the number 600851475143?
+## 
+##
+FUN <- function(x) {
+  
+  div <- seq_len(abs(x))
+  
+  factors <- data.frame(div[x %% div == 0L])
+  
+  y<-list(factors)
+  maxv<- factors[nrow(factors),1]
+  return(maxv)
+}
